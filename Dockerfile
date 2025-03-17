@@ -15,7 +15,7 @@ RUN gradle dependencies --no-daemon
 COPY src src
 
 # 애플리케이션 빌드
-RUN gradle build --no-daemon -x test #인증정보 없음으로 인해 발생하는 test 빌드 실패 해결
+RUN gradle build --no-daemon
 
 # 두 번째 스테이지: 실행 스테이지
 FROM ghcr.io/graalvm/jdk-community:23
